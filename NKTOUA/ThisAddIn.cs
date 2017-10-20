@@ -10,8 +10,18 @@ namespace NKTOUA
 {
     public partial class ThisAddIn
     {
+        private static ThisAddIn _instance = null;
+        public static ThisAddIn Instance
+        {
+            get
+            {
+                return _instance;
+            }
+        }
+
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
+            _instance = this;
             olApplication.Instance.Application = this.Application;
         }
 
@@ -32,7 +42,11 @@ namespace NKTOUA
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
+
+        protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            return new NKTOUA.Ribbon();
+        }
         #endregion
     }
 }

@@ -74,15 +74,26 @@ namespace NKTOUA
                 if (null != _explorers)
                 {
                     olExplorer exploreHandler = null;
+                    Outlook.Explorer activeExplore = _application.ActiveExplorer();
                     foreach (Outlook.Explorer explorer in _explorers)
                     {
-                        if(null != explorer)
+                        if( (null != explorer) && (activeExplore != explorer) )
                         {
                             exploreHandler = new olExplorer(explorer);
                             exploreHandler.Application = this.Application;
                             exploreHandler.OnInit();
                             _olExplorers.Add(exploreHandler);
                         }
+                    }
+
+                    //For active explorer
+                    if(null != activeExplore)
+                    {
+                        exploreHandler = new olExplorer(activeExplore);
+                        exploreHandler.Application = this.Application;
+                        exploreHandler.OnInit();
+                        exploreHandler.OnActive();
+                        _olExplorers.Add(exploreHandler);
                     }
                     _explorers.NewExplorer += OnNewExplorer;
                 }
