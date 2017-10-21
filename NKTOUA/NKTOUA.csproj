@@ -185,6 +185,13 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppSettings.cs" />
+    <Compile Include="frmCategorizing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategorizing.Designer.cs">
+      <DependentUpon>frmCategorizing.cs</DependentUpon>
+    </Compile>
     <Compile Include="olApplication.cs" />
     <Compile Include="olAppointmentItem.cs" />
     <Compile Include="olExplorer.cs" />
@@ -195,6 +202,9 @@
     </Compile>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategorizing.resx">
+      <DependentUpon>frmCategorizing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -238,7 +248,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Ribbon.xml" />
+    <EmbeddedResource Include="Ribbon.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_166.ico" />

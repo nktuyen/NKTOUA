@@ -11,11 +11,26 @@ namespace NKTOUA
     public partial class ThisAddIn
     {
         private static ThisAddIn _instance = null;
+        private const string _name = "NKTOUA";
         public static ThisAddIn Instance
         {
             get
             {
                 return _instance;
+            }
+        }
+
+        public string Name
+        {
+            get { return _name; }
+        }
+
+        public string AppDataPath
+        {
+            get
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + Name;
+                return path;
             }
         }
 
