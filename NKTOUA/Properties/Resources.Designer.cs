@@ -63,20 +63,317 @@ namespace NKTOUA.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon About {
+        internal static System.Drawing.Icon Categorize {
             get {
-                object obj = ResourceManager.GetObject("About", resourceCulture);
+                object obj = ResourceManager.GetObject("Categorize", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bạn có chắc chắn rằng mình muốn hủy bỏ xử lý hiện tại không?.
+        /// </summary>
+        internal static string frmGrouping_Message_AreYouSureToCancel {
+            get {
+                return ResourceManager.GetString("frmGrouping_Message_AreYouSureToCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lưu.
+        /// </summary>
+        internal static string frmSettings_BUTTON_Apply {
+            get {
+                return ResourceManager.GetString("frmSettings_BUTTON_Apply", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hủy.
+        /// </summary>
+        internal static string frmSettings_BUTTON_Cancel {
+            get {
+                return ResourceManager.GetString("frmSettings_BUTTON_Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lưu và đóng.
+        /// </summary>
+        internal static string frmSettings_BUTTON_OK {
+            get {
+                return ResourceManager.GetString("frmSettings_BUTTON_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nhóm theo tiêu chí:.
+        /// </summary>
+        internal static string frmSettings_GROUP_Criteria {
+            get {
+                return ResourceManager.GetString("frmSettings_GROUP_Criteria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Địa chỉ.
+        /// </summary>
+        internal static string frmSettings_RADIO_Address {
+            get {
+                return ResourceManager.GetString("frmSettings_RADIO_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thời gian.
+        /// </summary>
+        internal static string frmSettings_RADIO_Date {
+            get {
+                return ResourceManager.GetString("frmSettings_RADIO_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chủ đề.
+        /// </summary>
+        internal static string frmSettings_RADIO_Subject {
+            get {
+                return ResourceManager.GetString("frmSettings_RADIO_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chung.
+        /// </summary>
+        internal static string frmSettings_TAB_General {
+            get {
+                return ResourceManager.GetString("frmSettings_TAB_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nhóm.
+        /// </summary>
+        internal static string frmSettings_TAB_Grouping {
+            get {
+                return ResourceManager.GetString("frmSettings_TAB_Grouping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Chọn thư mục.
+        /// </summary>
+        internal static string frmTreeFolders {
+            get {
+                return ResourceManager.GetString("frmTreeFolders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Đồng ý.
+        /// </summary>
+        internal static string frmTreeFolders_BUTTON_OK {
+            get {
+                return ResourceManager.GetString("frmTreeFolders_BUTTON_OK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} trong các thư mục:.
+        /// </summary>
+        internal static string frmTreeFolders_LABEL_ChoseFolders {
+            get {
+                return ResourceManager.GetString("frmTreeFolders_LABEL_ChoseFolders", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon Categorize {
+        internal static System.Drawing.Icon MoveAllToRoot {
             get {
-                object obj = ResourceManager.GetObject("Categorize", resourceCulture);
+                object obj = ResourceManager.GetObject("MoveAllToRoot", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.About.
+        /// </summary>
+        internal static string NKTOUA_ABOUT_BUTTON {
+            get {
+                return ResourceManager.GetString("NKTOUA_ABOUT_BUTTON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xem thông tin về NKTOUA.
+        /// </summary>
+        internal static string NKTOUA_ABOUT_BUTTON_DESC {
+            get {
+                return ResourceManager.GetString("NKTOUA_ABOUT_BUTTON_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thông tin.
+        /// </summary>
+        internal static string NKTOUA_ABOUT_BUTTON_LABEL {
+            get {
+                return ResourceManager.GetString("NKTOUA_ABOUT_BUTTON_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xem thông tin về NKTOUA.
+        /// </summary>
+        internal static string NKTOUA_ABOUT_BUTTON_TOOLTIP {
+            get {
+                return ResourceManager.GetString("NKTOUA_ABOUT_BUTTON_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.Categorize.
+        /// </summary>
+        internal static string NKTOUA_CATEGORIZE_BUTTON {
+            get {
+                return ResourceManager.GetString("NKTOUA_CATEGORIZE_BUTTON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gom nhóm thư theo tiêu chí đã thiết lập.
+        /// </summary>
+        internal static string NKTOUA_CATEGORIZE_BUTTON_DESC {
+            get {
+                return ResourceManager.GetString("NKTOUA_CATEGORIZE_BUTTON_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nhóm.
+        /// </summary>
+        internal static string NKTOUA_GROUPING_BUTTON_LABEL {
+            get {
+                return ResourceManager.GetString("NKTOUA_CATEGORIZE_BUTTON_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gom nhóm thư theo tiêu chí đã thiết lập.
+        /// </summary>
+        internal static string NKTOUA_CATEGORIZE_BUTTON_TOOLTIP {
+            get {
+                return ResourceManager.GetString("NKTOUA_CATEGORIZE_BUTTON_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.
+        /// </summary>
+        internal static string NKTOUA_DROPDOWN_MENU {
+            get {
+                return ResourceManager.GetString("NKTOUA_DROPDOWN_MENU", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string NKTOUA_DROPDOWN_MENU_DESC {
+            get {
+                return ResourceManager.GetString("NKTOUA_DROPDOWN_MENU_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.
+        /// </summary>
+        internal static string NKTOUA_DROPDOWN_MENU_LABEL {
+            get {
+                return ResourceManager.GetString("NKTOUA_DROPDOWN_MENU_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string NKTOUA_DROPDOWN_MENU_TOOLTIP {
+            get {
+                return ResourceManager.GetString("NKTOUA_DROPDOWN_MENU_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.MoveAllToRoot.
+        /// </summary>
+        internal static string NKTOUA_MOVEALLTOROOT_BUTTON {
+            get {
+                return ResourceManager.GetString("NKTOUA_MOVEALLTOROOT_BUTTON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Di chuyển tất cả thư ra ngoài thư mục gốc.
+        /// </summary>
+        internal static string NKTOUA_MOVEALLTOROOT_BUTTON_DESC {
+            get {
+                return ResourceManager.GetString("NKTOUA_MOVEALLTOROOT_BUTTON_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Di chuyển tất cả ra ngoài thư mục gốc.
+        /// </summary>
+        internal static string NKTOUA_MOVEALLTOROOT_BUTTON_LABEL {
+            get {
+                return ResourceManager.GetString("NKTOUA_MOVEALLTOROOT_BUTTON_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Di chuyển tất cả thư ra ngoài thư mục gốc.
+        /// </summary>
+        internal static string NKTOUA_MOVEALLTOROOT_BUTTON_TOOLTIP {
+            get {
+                return ResourceManager.GetString("NKTOUA_MOVEALLTOROOT_BUTTON_TOOLTIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to NKTOUA.dropDown.Settings.
+        /// </summary>
+        internal static string NKTOUA_SETTINGS_BUTTON {
+            get {
+                return ResourceManager.GetString("NKTOUA_SETTINGS_BUTTON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiển thị hộp thoại cài đặt của chương trình.
+        /// </summary>
+        internal static string NKTOUA_SETTINGS_BUTTON_DESC {
+            get {
+                return ResourceManager.GetString("NKTOUA_SETTINGS_BUTTON_DESC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thiết lập.
+        /// </summary>
+        internal static string NKTOUA_SETTINGS_BUTTON_LABEL {
+            get {
+                return ResourceManager.GetString("NKTOUA_SETTINGS_BUTTON_LABEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiển thị hộp thoại cài đặt của chương trình.
+        /// </summary>
+        internal static string NKTOUA_SETTINGS_BUTTON_TOOLTIP {
+            get {
+                return ResourceManager.GetString("NKTOUA_SETTINGS_BUTTON_TOOLTIP", resourceCulture);
             }
         }
         

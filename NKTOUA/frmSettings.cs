@@ -24,10 +24,20 @@ namespace NKTOUA
         /// <param name="e"></param>
         private void frmSettings_Load(object sender, EventArgs e)
         {
-            AppSettings.Instance.Load(ThisAddIn.Instance.AppDataPath+"\\Settings.xml");
+            AppSettings.Instance.Load(NKTOUA_Application.Instance.DataPath+"\\Settings.xml");
             _settings = AppSettings.Instance.Clone();
+            this.Text = Properties.Resources.NKTOUA_SETTINGS_BUTTON_LABEL;
+            this.tabGrouping.Text = Properties.Resources.frmSettings_TAB_Grouping;
+            this.tabGeneral.Text = Properties.Resources.frmSettings_TAB_General;
+            this.grCategorizeBy.Text = Properties.Resources.frmSettings_GROUP_Criteria;
+            this.radCategorizeByAddress.Text = Properties.Resources.frmSettings_RADIO_Address;
+            this.radCategorizeByDate.Text = Properties.Resources.frmSettings_RADIO_Date;
+            this.radCategorizeBySubject.Text = Properties.Resources.frmSettings_RADIO_Subject;
+            this.btnApply.Text = Properties.Resources.frmSettings_BUTTON_Apply;
+            this.btnOK.Text = Properties.Resources.frmSettings_BUTTON_OK;
+            this.btnCancel.Text = Properties.Resources.frmSettings_BUTTON_Cancel;
 
-            switch (_settings.Categorize.Criteria)
+            switch (_settings.Grouping.Criteria)
             {
                 case ECategorizeBy.Address:
                     radCategorizeByAddress.Checked = true;
@@ -62,12 +72,12 @@ namespace NKTOUA
             {
                 AppSettings.Instance.Copy(_settings);
 
-                if (!System.IO.Directory.Exists(ThisAddIn.Instance.AppDataPath))
+                if (!System.IO.Directory.Exists(NKTOUA_Application.Instance.DataPath))
                 {
-                    System.IO.Directory.CreateDirectory(ThisAddIn.Instance.AppDataPath);
+                    System.IO.Directory.CreateDirectory(NKTOUA_Application.Instance.DataPath);
                 }
 
-                AppSettings.Instance.Save(ThisAddIn.Instance.AppDataPath + "\\Settings.xml");
+                AppSettings.Instance.Save(NKTOUA_Application.Instance.DataPath + "\\Settings.xml");
             }
 
             btnApply.Enabled = false;
@@ -84,12 +94,12 @@ namespace NKTOUA
             {
                 AppSettings.Instance.Copy(_settings);
 
-                if (!System.IO.Directory.Exists(ThisAddIn.Instance.AppDataPath))
+                if (!System.IO.Directory.Exists(NKTOUA_Application.Instance.DataPath))
                 {
-                    System.IO.Directory.CreateDirectory(ThisAddIn.Instance.AppDataPath);
+                    System.IO.Directory.CreateDirectory(NKTOUA_Application.Instance.DataPath);
                 }
 
-                AppSettings.Instance.Save(ThisAddIn.Instance.AppDataPath + "\\Settings.xml");
+                AppSettings.Instance.Save(NKTOUA_Application.Instance.DataPath + "\\Settings.xml");
             }
 
             this.Close();
@@ -97,17 +107,17 @@ namespace NKTOUA
 
         private void radCategorizeByAddress_CheckedChanged(object sender, EventArgs e)
         {
-            _settings.Categorize.Criteria = ECategorizeBy.Address;
+            _settings.Grouping.Criteria = ECategorizeBy.Address;
         }
 
         private void radCategorizeBySubject_CheckedChanged(object sender, EventArgs e)
         {
-            _settings.Categorize.Criteria = ECategorizeBy.Subject;
+            _settings.Grouping.Criteria = ECategorizeBy.Subject;
         }
 
         private void radCategorizeByDate_CheckedChanged(object sender, EventArgs e)
         {
-            _settings.Categorize.Criteria = ECategorizeBy.Date;
+            _settings.Grouping.Criteria = ECategorizeBy.Date;
         }
     }
 }

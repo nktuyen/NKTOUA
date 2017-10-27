@@ -118,13 +118,112 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="About" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Icon_8.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Categorize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_67.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="frmGrouping_Message_AreYouSureToCancel" xml:space="preserve">
+    <value>Bạn có chắc chắn rằng mình muốn hủy bỏ xử lý hiện tại không?</value>
+  </data>
+  <data name="frmSettings_TAB_Grouping" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="frmSettings_TAB_General" xml:space="preserve">
+    <value>Chung</value>
+  </data>
+  <data name="MoveAllToRoot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Icon_133.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NKTOUA_ABOUT_BUTTON" xml:space="preserve">
+    <value>NKTOUA.dropDown.About</value>
+  </data>
+  <data name="NKTOUA_ABOUT_BUTTON_DESC" xml:space="preserve">
+    <value>Xem thông tin về NKTOUA</value>
+  </data>
+  <data name="NKTOUA_ABOUT_BUTTON_LABEL" xml:space="preserve">
+    <value>Thông tin</value>
+  </data>
+  <data name="NKTOUA_ABOUT_BUTTON_TOOLTIP" xml:space="preserve">
+    <value>Xem thông tin về NKTOUA</value>
+  </data>
+  <data name="NKTOUA_CATEGORIZE_BUTTON" xml:space="preserve">
+    <value>NKTOUA.dropDown.Categorize</value>
+  </data>
+  <data name="NKTOUA_CATEGORIZE_BUTTON_DESC" xml:space="preserve">
+    <value>Gom nhóm thư theo tiêu chí đã thiết lập</value>
+  </data>
+  <data name="NKTOUA_CATEGORIZE_BUTTON_LABEL" xml:space="preserve">
+    <value>Nhóm</value>
+  </data>
+  <data name="NKTOUA_CATEGORIZE_BUTTON_TOOLTIP" xml:space="preserve">
+    <value>Gom nhóm thư theo tiêu chí đã thiết lập</value>
+  </data>
+  <data name="NKTOUA_DROPDOWN_MENU" xml:space="preserve">
+    <value>NKTOUA.dropDown</value>
+  </data>
+  <data name="NKTOUA_DROPDOWN_MENU_DESC" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NKTOUA_DROPDOWN_MENU_LABEL" xml:space="preserve">
+    <value>NKTOUA.dropDown</value>
+  </data>
+  <data name="NKTOUA_DROPDOWN_MENU_TOOLTIP" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NKTOUA_MOVEALLTOROOT_BUTTON" xml:space="preserve">
+    <value>NKTOUA.dropDown.MoveAllToRoot</value>
+  </data>
+  <data name="NKTOUA_MOVEALLTOROOT_BUTTON_DESC" xml:space="preserve">
+    <value>Di chuyển tất cả thư ra ngoài thư mục gốc</value>
+  </data>
+  <data name="NKTOUA_MOVEALLTOROOT_BUTTON_LABEL" xml:space="preserve">
+    <value>Di chuyển tất cả ra ngoài thư mục gốc</value>
+  </data>
+  <data name="NKTOUA_MOVEALLTOROOT_BUTTON_TOOLTIP" xml:space="preserve">
+    <value>Di chuyển tất cả thư ra ngoài thư mục gốc</value>
+  </data>
+  <data name="NKTOUA_SETTINGS_BUTTON" xml:space="preserve">
+    <value>NKTOUA.dropDown.Settings</value>
+  </data>
+  <data name="NKTOUA_SETTINGS_BUTTON_DESC" xml:space="preserve">
+    <value>Hiển thị hộp thoại cài đặt của chương trình</value>
+  </data>
+  <data name="NKTOUA_SETTINGS_BUTTON_LABEL" xml:space="preserve">
+    <value>Thiết lập</value>
+  </data>
+  <data name="NKTOUA_SETTINGS_BUTTON_TOOLTIP" xml:space="preserve">
+    <value>Hiển thị hộp thoại cài đặt của chương trình</value>
+  </data>
   <data name="Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon_166.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frmSettings_GROUP_Criteria" xml:space="preserve">
+    <value>Nhóm theo tiêu chí:</value>
+  </data>
+  <data name="frmSettings_BUTTON_Apply" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="frmSettings_BUTTON_Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="frmSettings_BUTTON_OK" xml:space="preserve">
+    <value>Lưu và đóng</value>
+  </data>
+  <data name="frmSettings_RADIO_Address" xml:space="preserve">
+    <value>Địa chỉ</value>
+  </data>
+  <data name="frmSettings_RADIO_Date" xml:space="preserve">
+    <value>Thời gian</value>
+  </data>
+  <data name="frmSettings_RADIO_Subject" xml:space="preserve">
+    <value>Chủ đề</value>
+  </data>
+  <data name="frmTreeFolders" xml:space="preserve">
+    <value>Chọn thư mục</value>
+  </data>
+  <data name="frmTreeFolders_BUTTON_OK" xml:space="preserve">
+    <value>Đồng ý</value>
+  </data>
+  <data name="frmTreeFolders_LABEL_ChoseFolders" xml:space="preserve">
+    <value>{0} trong các thư mục:</value>
   </data>
 </root>

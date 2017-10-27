@@ -7,7 +7,7 @@ using Office = Microsoft.Office.Core;
 
 namespace NKTOUA
 {
-    class olAppointmentItem : olItem
+    class NKTOUA_Appointment : NKTOUA_Item
     {
         #region "Properties"
         public Outlook.AppointmentItem Item
@@ -43,7 +43,7 @@ namespace NKTOUA
         #endregion
 
         #region "member functions"
-        public olAppointmentItem(Outlook.AppointmentItem item) : base(item)
+        public NKTOUA_Appointment(Outlook.AppointmentItem item) : base(item)
         {
             
         }
@@ -55,7 +55,7 @@ namespace NKTOUA
         {
             Item = null;
         }
-        ~olAppointmentItem()
+        ~NKTOUA_Appointment()
         {
             Dispose();
         }

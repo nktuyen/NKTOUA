@@ -179,32 +179,33 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="About.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="About.Designer.cs">
-      <DependentUpon>About.cs</DependentUpon>
-    </Compile>
     <Compile Include="AppSettings.cs" />
-    <Compile Include="frmCategorizing.cs">
+    <Compile Include="frmGrouping.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCategorizing.Designer.cs">
-      <DependentUpon>frmCategorizing.cs</DependentUpon>
+    <Compile Include="frmGrouping.Designer.cs">
+      <DependentUpon>frmGrouping.cs</DependentUpon>
     </Compile>
-    <Compile Include="olApplication.cs" />
-    <Compile Include="olAppointmentItem.cs" />
-    <Compile Include="olExplorer.cs" />
-    <Compile Include="olInspector.cs" />
-    <Compile Include="olItem.cs" />
+    <Compile Include="NKTOUA_Application.cs" />
+    <Compile Include="NKTOUA_Appointment.cs" />
+    <Compile Include="NKTOUA_Explorer.cs" />
+    <Compile Include="frmFolderTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFolderTree.Designer.cs">
+      <DependentUpon>frmFolderTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NKTOUA_FolderWalker.cs" />
+    <Compile Include="NKTOUA_Inspector.cs" />
+    <Compile Include="NKTOUA_Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <EmbeddedResource Include="About.resx">
-      <DependentUpon>About.cs</DependentUpon>
+    <EmbeddedResource Include="frmGrouping.resx">
+      <DependentUpon>frmGrouping.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCategorizing.resx">
-      <DependentUpon>frmCategorizing.cs</DependentUpon>
+    <EmbeddedResource Include="frmFolderTree.resx">
+      <DependentUpon>frmFolderTree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,8 +217,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="NKTOUA_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
@@ -229,12 +230,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Ribbon.cs" />
-    <Compile Include="Settings.cs">
+    <Compile Include="NKTOUA_Ribbon.cs" />
+    <Compile Include="frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -248,7 +249,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Ribbon.xml">
+    <EmbeddedResource Include="NKTOUA_Ribbon.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -260,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Icon_8.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_133.ico" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

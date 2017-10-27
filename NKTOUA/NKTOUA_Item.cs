@@ -8,21 +8,16 @@ using Office = Microsoft.Office.Core;
 
 namespace NKTOUA
 {
-    class olItem : IDisposable
+    class NKTOUA_Item : IDisposable
     {
         #region "Properties"
-        protected Outlook.Application _application = null;
         protected dynamic _item = null;
 
-        public Outlook.Application Application
-        {
-            get { return _application; }
-            set { _application = value as Outlook.Application; }
-        }
+        public NKTOUA_Application Application { get; }
         #endregion
 
         #region "Member functions"
-        public olItem(dynamic item)
+        public NKTOUA_Item(dynamic item, NKTOUA_Application application = null)
         {
             _item = item;
         }
@@ -31,7 +26,7 @@ namespace NKTOUA
         {
             
         }
-        ~olItem()
+        ~NKTOUA_Item()
         {
             Dispose();
         }

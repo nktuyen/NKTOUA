@@ -10,34 +10,13 @@ namespace NKTOUA
 {
     public partial class ThisAddIn
     {
-        private static ThisAddIn _instance = null;
-        private const string _name = "NKTOUA";
-        public static ThisAddIn Instance
-        {
-            get
-            {
-                return _instance;
-            }
-        }
+        private NKTOUA.NKTOUA_Ribbon _ribbon = null;
 
-        public string Name
-        {
-            get { return _name; }
-        }
-
-        public string AppDataPath
-        {
-            get
-            {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + Name;
-                return path;
-            }
-        }
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-            _instance = this;
-            olApplication.Instance.Application = this.Application;
+            NKTOUA_Application.Instance.olApplication = this.Application;
+            NKTOUA_Application.Instance.Ribbon = _ribbon;
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
@@ -60,7 +39,13 @@ namespace NKTOUA
 
         protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
         {
-            return new NKTOUA.Ribbon();
+            if (null == _ribbon)
+            {
+                _ribbon = new NKTOUA_Ribbon();
+                _ribbon.Application = NKTOUA_Application.Instance;
+            }
+
+            return _ribbon;
         }
         #endregion
     }

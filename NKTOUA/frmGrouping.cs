@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace NKTOUA
 {
-    public partial class frmCategorizing : Form
+    public partial class frmGrouping : Form
     {
         private BackgroundWorker _worker = null;
 
@@ -32,7 +32,7 @@ namespace NKTOUA
             }
         }
 
-        public frmCategorizing(BackgroundWorker worker)
+        public frmGrouping(BackgroundWorker worker)
         {
             InitializeComponent();
             Worker = worker;
@@ -40,7 +40,7 @@ namespace NKTOUA
 
         private void frmCategorizing_Load(object sender, EventArgs e)
         {
-
+            this.Text = Properties.Resources.NKTOUA_GROUPING_BUTTON_LABEL;
         }
 
         private void frmCategorizing_FormClosed(object sender, FormClosedEventArgs e)
@@ -52,7 +52,7 @@ namespace NKTOUA
         {
             if (_worker.IsBusy)
             {
-                if (MessageBox.Show("Are you sure to cancel?", ThisAddIn.Instance.Name, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                if (MessageBox.Show(Properties.Resources.frmGrouping_Message_AreYouSureToCancel, NKTOUA_Application.Instance.Name, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
                     e.Cancel = true;
                     return;

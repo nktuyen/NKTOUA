@@ -8,17 +8,17 @@ using Office = Microsoft.Office.Core;
 
 namespace NKTOUA
 {
-    class olApplication : IDisposable
+    public class NKTOUA_Application : IDisposable
     {
         #region "Properties"
-        private static olApplication _instance = null;
+        private static NKTOUA_Application _instance = null;
         private Outlook.Application _application = null;
         private Outlook.Explorers _explorers = null;
-        private List<olExplorer> _olExplorers = null;
+        private List<NKTOUA_Explorer> _olExplorers = null;
         private Outlook.Inspectors _inspectors = null;
-        private List<olInspector> _olInspectors = null;
+        private List<NKTOUA_Inspector> _olInspectors = null;
 
-        public Outlook.Application Application
+        public Outlook.Application olApplication
         {
             get { return _application; }
             set
@@ -60,6 +60,24 @@ namespace NKTOUA
             }
         }
 
+        public NKTOUA_Ribbon Ribbon { get; set; }
+        public string Name
+        {
+            get
+            {
+                return "NKTOUA";
+            }
+        }
+
+        public string DataPath
+        {
+            get
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + Name;
+                return path;
+            }
+        }
+
         private Outlook.Explorers Explorers
         {
             get { return _explorers; }
@@ -73,14 +91,14 @@ namespace NKTOUA
                 _explorers = value as Outlook.Explorers;
                 if (null != _explorers)
                 {
-                    olExplorer exploreHandler = null;
+                    NKTOUA_Explorer exploreHandler = null;
                     Outlook.Explorer activeExplore = _application.ActiveExplorer();
                     foreach (Outlook.Explorer explorer in _explorers)
                     {
                         if( (null != explorer) && (activeExplore != explorer) )
                         {
-                            exploreHandler = new olExplorer(explorer);
-                            exploreHandler.Application = this.Application;
+                            exploreHandler = new NKTOUA_Explorer(explorer);
+                            exploreHandler.Application = this.olApplication;
                             exploreHandler.OnInit();
                             _olExplorers.Add(exploreHandler);
                         }
@@ -89,8 +107,8 @@ namespace NKTOUA
                     //For active explorer
                     if(null != activeExplore)
                     {
-                        exploreHandler = new olExplorer(activeExplore);
-                        exploreHandler.Application = this.Application;
+                        exploreHandler = new NKTOUA_Explorer(activeExplore);
+                        exploreHandler.Application = this.olApplication;
                         exploreHandler.OnInit();
                         exploreHandler.OnActive();
                         _olExplorers.Add(exploreHandler);
@@ -113,13 +131,13 @@ namespace NKTOUA
                 _inspectors = value as Outlook.Inspectors;
                 if (null != _inspectors)
                 {
-                    olInspector newInspector = null;
+                    NKTOUA_Inspector newInspector = null;
                     foreach (Outlook.Inspector inspec in _inspectors)
                     {
                         if (null != inspec)
                         {
-                            newInspector = new olInspector(inspec);
-                            newInspector.Application = this.Application;
+                            newInspector = new NKTOUA_Inspector(inspec);
+                            newInspector.Application = this.olApplication;
                             newInspector.OnInit();
                             _olInspectors.Add(newInspector);
                         }
@@ -129,13 +147,13 @@ namespace NKTOUA
             }
         }
 
-        public static olApplication Instance
+        public static NKTOUA_Application Instance
         {
             get
             {
                 if (null == _instance)
                 {
-                    _instance = new olApplication();
+                    _instance = new NKTOUA_Application();
                 }
                 return _instance;
             }
@@ -146,15 +164,15 @@ namespace NKTOUA
         public void Dispose()
         {
             Explorers = null;
-            Application = null;
+            olApplication = null;
         }
 
-        private olApplication()
+        private NKTOUA_Application()
         {
-            _olExplorers = new List<olExplorer>();
+            _olExplorers = new List<NKTOUA_Explorer>();
         }
 
-        ~olApplication()
+        ~NKTOUA_Application()
         {
             Dispose();
         }
@@ -163,7 +181,7 @@ namespace NKTOUA
         {
             if (null != _olExplorers)
             {
-                foreach (olExplorer expl in _olExplorers)
+                foreach (NKTOUA_Explorer expl in _olExplorers)
                 {
                     expl.Dispose();
                 }
@@ -175,7 +193,7 @@ namespace NKTOUA
         {
             if(null != _olInspectors)
             {
-                foreach(olInspector inspec in _olInspectors)
+                foreach(NKTOUA_Inspector inspec in _olInspectors)
                 {
                     inspec.Dispose();
                 }
@@ -206,10 +224,10 @@ namespace NKTOUA
         /// </summary>
         private void OnNewExplorer(Outlook.Explorer explorer)
         {
-            olExplorer newExplorer = new olExplorer(explorer);
+            NKTOUA_Explorer newExplorer = new NKTOUA_Explorer(explorer);
             if(null != newExplorer)
             {
-                newExplorer.Application = this.Application;
+                newExplorer.Application = this.olApplication;
                 newExplorer.OnInit();
                 _olExplorers.Add(newExplorer);
             }

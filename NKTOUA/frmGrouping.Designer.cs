@@ -1,6 +1,6 @@
 ﻿namespace NKTOUA
 {
-    partial class frmCategorizing
+    partial class frmGrouping
     {
         /// <summary>
         /// Required designer variable.

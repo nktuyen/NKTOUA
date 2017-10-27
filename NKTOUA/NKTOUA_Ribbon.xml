@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load" loadImage="GetImage">
+  <ribbon>
+    <tabs>
+      <tab idMso="TabMail">
+        <group id="NKTOUA" getLabel="GetLabel" getVisible="GetVisible">
+          <menu id="NKTOUA.dropDown" getLabel="GetLabel"  getVisible="GetVisible" getEnabled="GetEnable">
+            <button id="NKTOUA.dropDown.Settings" image="NKTOUA.dropDown.Settings" getKeytip="GetKeytip" getSupertip="GetSupertip" getScreentip="GetScreentip"  getDescription="GetDescription" onAction="OnAction"  getLabel="GetLabel"  getVisible="GetVisible" getEnabled="GetEnable"/>
+            <menuSeparator id="NKTOUA.dropDown.seperator.1"/>
+            <button id="NKTOUA.dropDown.Categorize" image="NKTOUA.dropDown.Categorize" getKeytip="GetKeytip" getSupertip="GetSupertip" getScreentip="GetScreentip"  getDescription="GetDescription" onAction="OnAction"  getLabel="GetLabel"  getVisible="GetVisible" getEnabled="GetEnable"/>
+            <button id="NKTOUA.dropDown.MoveAllToRoot" image="NKTOUA.dropDown.MoveAllToRoot" getKeytip="GetKeytip" getSupertip="GetSupertip"  getScreentip="GetScreentip" getDescription="GetDescription" onAction="OnAction"  getLabel="GetLabel"  getVisible="GetVisible" getEnabled="GetEnable"/>
+          </menu>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+

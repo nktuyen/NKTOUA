@@ -8,14 +8,14 @@ using Office = Microsoft.Office.Core;
 
 namespace NKTOUA
 {
-    class olInspector : IDisposable
+    class NKTOUA_Inspector : IDisposable
     {
         #region "properties"
         private Outlook.Inspector _inspector = null;
         private Outlook.Application _application = null;
-        private olItem _olItem = null;
+        private NKTOUA_Item _olItem = null;
 
-        public Outlook.Inspector Inspector
+        public Outlook.Inspector olInspector
         {
             get { return _inspector; }
             set
@@ -54,7 +54,7 @@ namespace NKTOUA
             set { _application = value as Outlook.Application; }
         }
 
-        public olItem Item
+        public NKTOUA_Item Item
         {
             get { return _olItem; }
             set
@@ -70,12 +70,12 @@ namespace NKTOUA
         #endregion
 
         #region "Member functions"
-        public olInspector(Outlook.Inspector inspector)
+        public NKTOUA_Inspector(Outlook.Inspector inspector)
         {
-            Inspector = inspector;
+            olInspector = inspector;
         }
 
-        ~olInspector()
+        ~NKTOUA_Inspector()
         {
             Dispose();
         }
@@ -83,7 +83,7 @@ namespace NKTOUA
         public void Dispose()
         {
             Item = null;
-            Inspector = null;
+            olInspector = null;
         }
         #endregion
 
@@ -98,7 +98,7 @@ namespace NKTOUA
                 Outlook.AppointmentItem appItem = _inspector.CurrentItem as Outlook.AppointmentItem;
                 if (null != appItem)
                 {
-                    Item = new olAppointmentItem(appItem);
+                    Item = new NKTOUA_Appointment(appItem);
                 }
             }
         }

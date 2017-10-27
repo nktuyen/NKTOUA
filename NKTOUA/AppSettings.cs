@@ -104,7 +104,7 @@ namespace NKTOUA
             set { _general = value; }
         }
 
-        public AppSettingCategorize Categorize
+        public AppSettingCategorize Grouping
         {
             get { return _categorize; }
             set { _categorize = value; }
@@ -131,7 +131,7 @@ namespace NKTOUA
         {
             AppSettings otherSettings = other as AppSettings;
             if ( (!otherSettings.General.Equal(this.General))
-                || (!otherSettings.Categorize.Equal(this.Categorize)) 
+                || (!otherSettings.Grouping.Equal(this.Grouping)) 
                 )
 
                 return false;
@@ -144,7 +144,7 @@ namespace NKTOUA
             base.Copy(other);
             AppSettings otherSettings = other as AppSettings;
             General.Copy(otherSettings.General);
-            Categorize.Copy(otherSettings.Categorize);
+            Grouping.Copy(otherSettings.Grouping);
         }
 
         public AppSettings Clone()
@@ -168,7 +168,7 @@ namespace NKTOUA
                 AppSettings tmp = (AppSettings)_serializer.Deserialize(reader);
                 fs.Close();
                 General = tmp.General;
-                Categorize = tmp.Categorize;
+                Grouping = tmp.Grouping;
             }
             catch(Exception ex)
             {
